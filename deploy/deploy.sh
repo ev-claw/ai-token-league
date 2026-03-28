@@ -6,9 +6,9 @@ REPO=git@github.com:ev-claw/ai-token-league.git
 
 # Clone or pull the repository
 if [ -d "$APP/.git" ]; then
-  runuser -u r3x-deploy -- git -C "$APP" pull --ff-only
+  runuser -u deploy -- git -C "$APP" pull --ff-only
 else
-  runuser -u r3x-deploy -- sh -c "GIT_SSH_COMMAND='ssh -o StrictHostKeyChecking=accept-new' git clone $REPO $APP"
+  runuser -u deploy -- sh -c "GIT_SSH_COMMAND='ssh -o StrictHostKeyChecking=accept-new' git clone $REPO $APP"
 fi
 
 # Create Caddy configuration
