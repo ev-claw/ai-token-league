@@ -1,0 +1,6 @@
+ai-dashboard.r3x.io {
+    root * /srv/apps/ai-dashboard/dist
+    encode gzip
+    try_files {path} /index.html
+    file_server
+}
